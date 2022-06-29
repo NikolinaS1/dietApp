@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import Image from "next/image";
 import Link from "next/link";
 import { v4 as uuid } from "uuid";
+import RecipeList from "../../components/RecipeList";
 
 export default function recipe({
   logged,
@@ -166,34 +167,7 @@ export default function recipe({
         </div>
 
         {/* Result */}
-        <div className="flex-grid">
-          {recipes.map((recipe, index) => (
-            <div key={recipe.id}>
-              <Link href={recipe.url}>
-                <a>
-                  <div className="card">
-                    <Image
-                      src={recipe.image}
-                      alt={recipe.title}
-                      width={331}
-                      height={231}
-                      className="image"
-                      // blurDataURL="data:..." automatically provided
-                      // placeholder="blur" // Optional blur-up while loading
-                    />
-                    <h3 className="title">{recipe.title}</h3>
-                  </div>
-                  <div className="missedIngredients">
-                    <h4>Missed ingredients:</h4>
-                    {recipe.missedIngredients.map((missedIngredient, index) => (
-                      <p key={index}>{missedIngredient.name}</p>
-                    ))}
-                  </div>
-                </a>
-              </Link>
-            </div>
-          ))}
-        </div>
+        <RecipeList recipes={recipes} />
       </div>
     </Layout>
   );
