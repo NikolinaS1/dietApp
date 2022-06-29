@@ -1,0 +1,44 @@
+.filter-ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 420px;
+}
+
+.filter-ingredients .ingredient {
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 10px 10px;
+}
+
+.filter-ingredients .ingredient:hover {
+  background: linear-gradient(60deg, #f0fdf0, darkgreen);
+  color: black;
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.selected-ingredient {
+  display: flex;
+  flex-wrap: wrap;
+  //align-items: center;
+  gap: 5px;
+  min-height: 40px;
+  max-width: 280px;
+}
+
+.selected-ingredient .ingredient {
+  display: flex;
+  flex-wrap: wrap;
+  //align-items: center;
+  gap: 5px;
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 10px 10px;
+  background: linear-gradient(60deg, #f0fdf0, darkgreen);
+  border: 1px solid white;
+}
+
+.selected-ingredient .ingredient:hover {
+  cursor: pointer;
+}
