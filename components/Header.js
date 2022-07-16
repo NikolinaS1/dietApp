@@ -39,7 +39,7 @@ export default function Header({ logged }) {
     <div className="header">
       <Link href="/">
         <a>
-          <h1>A web application to help change your diet</h1>
+          <h1>Web application to help change the diet</h1>
         </a>
       </Link>
       <div className="">

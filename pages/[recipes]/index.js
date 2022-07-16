@@ -110,12 +110,22 @@ export default function recipe({
     setSelectedIngredients(newSelectedIngredientItems);
   };
 
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   return (
     <Layout logged={logged}>
       <div className="searchPage">
         <div className="titleSearch">
           <h1>Search Recipes by Ingredients</h1>
         </div>
+        <p className="choosedDiet">
+          Your selected diet is:{" "}
+          {capitalizeFirstLetter(
+            selectedDiet.replace(/([a-z])([A-Z])/g, "$1 $2")
+          )}
+        </p>
         {/* Search */}
         <div className="searchIngredients">
           <form onSubmit={handleSubmit(onSubmit)}>
